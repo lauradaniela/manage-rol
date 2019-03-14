@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Components
 import { LoginComponent } from './login/login.component';
@@ -34,6 +35,7 @@ import { UserService } from './services/user/user.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserService,
