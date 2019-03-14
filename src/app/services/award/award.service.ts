@@ -10,6 +10,7 @@ import { Award } from '../../models/award';
 export class AwardService {
 
   awardList: AngularFireList<any>;
+  selectAward: Award = new Award();
 
   constructor(private firebase: AngularFireDatabase) { }
 
