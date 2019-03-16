@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 import { Award } from '../../models/award';
+import { tokenKey } from '@angular/core/src/view';
+
+import { LoginService } from '../../services/login/login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +15,10 @@ export class AwardService {
   awardList: AngularFireList<any>;
   selectAward: Award = new Award();
 
-  constructor(private firebase: AngularFireDatabase) { }
+  constructor(private firebase: AngularFireDatabase, private loginService: LoginService) { }
 
   getAwards() {
+    console.log(this.loginService.getIdToken());
     return this.awardList = this.firebase.list('awards');
   }
 
