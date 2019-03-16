@@ -1,3 +1,33 @@
-<p>
-  list-awards works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <div>
+      <span class="subtitle-text">Listado de premios</span>
+    </div>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <th>Nombre</th>
+        <th>Costo</th>
+        <th>Descripción</th>
+        <th>Cantidad en inventario</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let award of awardList">
+          <td>{{award.name}}</td>
+          <td>{{award.cost}}</td>
+          <td>{{award.description}}</td>
+          <td>{{award.amount}}</td>
+          <td>
+            <!-- <a class="btn btn-info text-white margin-icons" (click)="onEdit(award)">
+              <i class="fa fa-edit"></i>
+            </a> -->
+            <a class="btn btn-danger text-white" (click)="onDelete(award)">
+              <i class="fa fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>

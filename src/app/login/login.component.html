@@ -2,18 +2,18 @@
   <div class="card-body">
     <div class="content">
       <div id="formContent">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="row width-full">
             <div class="col-12 col-sm-12 col-md-12 input">
-              <input type="text" formControlName="userName" id="username" class="form-control" name="username"
-                placeholder="username">
+              <input type="text" formControlName="email" id="email" class="form-control" name="email"
+                placeholder="Ingresa correo" (keyup)="validForm()">
             </div>
             <div class="col-12 col-sm-12 col-md-12 input">
-              <input type="text" formControlName="password" id="password" class="form-control" name="password"
-                placeholder="password">
+              <input type="type" formControlName="password" id="password" class="form-control" name="password"
+                placeholder="Ingresa contraseña" (keyup)="validForm()">
             </div>
             <div class="col-12 col-sm-12 col-md-12 input">
-              <input type="submit" class=" btn btn-primary" value="Log In">
+              <input type="submit" class=" btn btn-primary" [disabled]="!activeButton" value="Log In">
             </div>
           </div>
         </form>

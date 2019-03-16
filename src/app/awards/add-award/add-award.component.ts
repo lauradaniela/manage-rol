@@ -20,17 +20,17 @@ export class AddAwardComponent implements OnInit {
     this.awardForm = this.form.group({
       name: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(100)])],
       cost: ['', Validators.compose([Validators.required])],
+      amount: ['', Validators.compose([Validators.required])],
       description: ['', Validators.compose([Validators.required, Validators.maxLength(200)])]
     });
   }
 
   onSubmit() {
-    console.log('entro aca');
     const award: Award = new Award();
     award.name = this.awardForm.get('name').value;
     award.cost = this.awardForm.get('cost').value;
     award.description = this.awardForm.get('description').value;
-    award.amount = 1;
+    award.amount = this.awardForm.get('amount').value;
     this.awardService.insertAward(award);
     this.resetForm();
   }

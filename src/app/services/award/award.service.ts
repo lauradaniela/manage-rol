@@ -19,8 +19,6 @@ export class AwardService {
   }
 
   insertAward(award: Award) {
-
-    console.log(award, 'entro al servicio');
     this.awardList.push({
       name: award.name,
       cost: award.cost,

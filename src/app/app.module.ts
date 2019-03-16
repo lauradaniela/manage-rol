@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
+// for AngularFireAuth
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -19,6 +21,9 @@ import { ListUsersComponent } from './users/list-users/list-users.component';
 // Services
 import { AwardService } from './services/award/award.service';
 import { UserService } from './services/user/user.service';
+import { LoginService} from './services/login/login.service';
+
+// Components
 import { AddAwardComponent } from './awards/add-award/add-award.component';
 
 @NgModule({
@@ -36,13 +41,15 @@ import { AddAwardComponent } from './awards/add-award/add-award.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule
   ],
-  providers: [
+  providers: [  
     UserService,
-    AwardService
+    AwardService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
