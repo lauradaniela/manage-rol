@@ -1,20 +1,24 @@
-<div class="content">
-  <div id="formContent">
-    <i class="fas fa-user"></i>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 input">
-          <input type="text" formControlName="userName" id="login" class="form-control" name="login"
-            placeholder="login">
-        </div>
-        <div class="col-12 col-sm-12 col-md-12 input">
-          <input type="text" formControlName="password" id="password" class="form-control" name="login"
-            placeholder="password">
-        </div>
-        <div class="col-12 col-sm-12 col-md-12 input">
-          <input type="submit" class=" btn btn-primary" value="Log In">
-        </div>
+<div class="card">
+  <div class="card-body">
+    <div class="content">
+      <div id="formContent">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit">
+          <div class="row width-full">
+            <div class="col-12 col-sm-12 col-md-12 input">
+              <input type="text" formControlName="userName" id="username" class="form-control" name="username"
+                placeholder="username">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 input">
+              <input type="text" formControlName="password" id="password" class="form-control" name="password"
+                placeholder="password">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 input">
+              <input type="submit" class=" btn btn-primary" value="Log In">
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
+
 </div>

@@ -19,6 +19,8 @@ export class AwardService {
   }
 
   insertAward(award: Award) {
+
+    console.log(award, 'entro al servicio');
     this.awardList.push({
       name: award.name,
       cost: award.cost,
@@ -27,8 +29,8 @@ export class AwardService {
     });
   }
 
-  updateProduct(award: Award) {
-    this.awardList.update(award.id, {
+  updateProduct(award) {
+    this.awardList.update(award.$key, {
       name: award.name,
       cost: award.cost,
       description: award.description,
@@ -36,7 +38,7 @@ export class AwardService {
     });
   }
 
-  deleteProduct(id: string) {
-    this.awardList.remove(id);
+  deleteProduct($key: string) {
+    this.awardList.remove($key);
   }
 }

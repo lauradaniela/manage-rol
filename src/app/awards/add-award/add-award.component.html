@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-body">
+    <div id="formContent">
+      <div class="">
+        <span class="subtitle margin-subtitle">Agregar nuevo premio</span>
+      </div>
+      <form [formGroup]="awardForm" (ngSubmit)="onSubmit()">
+        <div class="row width-full">
+          <div class="col-12 col-sm-12 col-md-12 input">
+            <span class="span-general">Ingresa nombre del premio</span>
+            <input type="text" formControlName="name" id="name" class="form-control" name="name"
+              placeholder="Nombre del premio">
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 input">
+            <span class="span-general">Ingresa el costo en puntos</span>
+            <input type="number" formControlName="cost" id="cost" class="form-control" name="cost"
+              placeholder="Ingresa puntos">
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 input">
+            <span class="span-general">Ingresa descripción del premio</span>
+            <textarea class="form-control" id="description" name="description" rows="2" formControlName="description"></textarea>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 input">
+            <button type="submit" class=" btn btn-primary margin-button">
+              <i class="fa fa-plus-circle"></i>
+              Agregar premio
+            </button>
+            <button type="reset" class=" btn btn-secondary" (click)="resetForm()">
+                <i class="fa fa-ban"></i>
+                Cancelar
+              </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>ß

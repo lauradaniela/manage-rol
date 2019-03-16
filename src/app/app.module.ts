@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -19,6 +19,7 @@ import { ListUsersComponent } from './users/list-users/list-users.component';
 // Services
 import { AwardService } from './services/award/award.service';
 import { UserService } from './services/user/user.service';
+import { AddAwardComponent } from './awards/add-award/add-award.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +29,16 @@ import { UserService } from './services/user/user.service';
     ListAwardsComponent,
     UsersComponent,
     AddUserComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    AddAwardComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     UserService,

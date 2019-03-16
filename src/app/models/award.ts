@@ -1,5 +1,5 @@
 export class Award {
-    id: string;
+    $key: string;
     name: string;
     cost: number;
     description: string;
