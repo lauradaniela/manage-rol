@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+PAGINAS DE INTERES
+
+https://www.youtube.com/watch?v=WND9mw3HiBM
+https://www.youtube.com/watch?v=Q6qhzG7mObU
+https://www.youtube.com/watch?v=3qODuvp1Zp8
+https://www.youtube.com/watch?v=mtuh9c3I9Xk
+https://itnext.io/part-2-complete-step-by-step-firebase-authentication-in-angular-2-25d284102632
+https://alligator.io/angular/firebase-crud-operations/
